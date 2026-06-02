@@ -1,9 +1,13 @@
 {
-  "buildCommand": "cd frontend && npm run build",
-  "installCommand": "cd frontend && npm install",
-  "outputDirectory": "frontend/dist",
-  "rewrites": [
-    { "source": "/auth/(.*)", "destination": "/backend/main.py" },
-    { "source": "/tasks(.*)", "destination": "/backend/main.py" }
-  ]
+    "experimentalServices": {
+        "frontend": {
+            "root": "frontend",
+            "routePrefix": "/",
+            "framework": "vite"
+        },
+        "backend": {
+            "root": "backend",
+            "routePrefix": "/_/backend"
+        }
+    }
 }
