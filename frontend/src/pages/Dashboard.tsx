@@ -24,7 +24,6 @@ export default function Dashboard() {
   const storeTasks = useTaskStore((s) => s.tasks);
   const setTasks = useTaskStore((s) => s.setTasks);
   const toggleDone = useTaskStore((s) => s.toggleDone);
-  const userName = useUserStore((s) => s.name);
 
   useEffect(() => {
     if (!userId) return;

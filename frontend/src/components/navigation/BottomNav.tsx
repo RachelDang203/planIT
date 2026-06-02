@@ -74,7 +74,7 @@ function HomeIcon({ active }: { active: boolean }) {
   );
 }
 
-function TasksIcon({ active }: { active: boolean }) {
+function TasksIcon({ active: _active }: { active: boolean }) {
   return (
     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M7 4h10v3H7zM6 8h12v12H6z" />

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import MobileContainer from '../components/layout/MobileContainer';
 import { useTaskStore } from '../store/tasks';
 
@@ -61,7 +60,6 @@ const subjects = [
 ];
 
 export default function Progress() {
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<Tab>('week');
   const tasks = useTaskStore((s) => s.tasks);
 
