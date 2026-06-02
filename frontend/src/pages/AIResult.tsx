@@ -27,9 +27,10 @@ const stats = [
 
 export default function AIResult() {
   const navigate = useNavigate();
-  const draft = useTaskStore((s) => s.draft);
-  const subjectName = draft.subject || 'Untitled Task';
-  const deadlineDisplay = draft.deadline ? `Due ${draft.deadline}` : 'Due date not set';
+  const tasks = useTaskStore((s) => s.tasks);
+  const latestTask = tasks[tasks.length - 1];
+  const subjectName = latestTask?.subject || 'Untitled Task';
+  const deadlineDisplay = latestTask?.deadline ? `Due ${latestTask.deadline}` : 'Due date not set';
 
   return (
     <MobileContainer className="relative min-h-screen overflow-hidden bg-white font-sans text-[#1F1D2B]">
